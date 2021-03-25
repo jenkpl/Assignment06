@@ -13,13 +13,6 @@ const $ = (id) => {
 
     function init() {
         btn             = $('btnAddEmployee');
-        Ename           = $('name');
-        Eid             = $('id');
-        Eextension      = $('extension');
-        Eemail          = $('email');
-        Edepartment     = $('departmentt');
-
-   
 
 // HANDLE THE CLICK EVENT FOR THE BTNADDEMPLOYEE BUTTON
 // const btn = $('btnAddEmployee');
@@ -27,12 +20,9 @@ btn.addEventListener('click', addE );
 
 // OPEN THE ADD-EMPLOYEE.HTML PAGE WITHIN A POPUP
 function addE() {
-window.open("/add-employee.html");
+window.open("add-employee.html", "popup", "width=100, height=100");
 
-window.resizeTo(800, 700);
-window.moveTo(
-    window.screen.availWidth / 2,
-    window.screen.availHeight / 2
-  );
+
+
 }
 }

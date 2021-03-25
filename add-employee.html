@@ -8,10 +8,19 @@
     <script src="js/add-employee.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="css/styles.css">
+    <script> 
+    function empAdd() {
+    let popwidth = 800;
+    let popheight = 700;  // SET WIDTH AND HEIGHT VARIABLES TO 800 x 700
+    window.resizeTo( popwidth, popheight);  // RESIZE THE POPUP TO THE SET WIDTH AND HEIGHT
+    window.moveTo((window.screen.width - popwidth) / 2, (window.screen.height - popheight) / 2);
+}  // MOVE THE POPUP TO THE MIDDLE OF THE SCREEN
+window.addEventListener('load', empAdd);  // HANDLE THE LOAD EVENT OF THE WINDOW
+   </script>
 </head>
 <body class="m-3">
     <h2>Add Employee</h2>
-    <form id="empForm">
+    <form id="eForm">
         <label for="Fid">8-Digit Employee ID</label><br>
         <input type="text" maxlength="8" required id="Fid"><br>
         
@@ -35,7 +44,8 @@
         </select><br><br>
 
         <input type="submit" class="btn btn-primary" name="submit" id="submit" value="Add Employee">
-        <input type="button" class="btn btn-primary" name="cancel" id="cancel" value="Cancel">        
+        <input type="button" class="btn btn-primary" name="cancel" id="Xcancel" value="Cancel" onclick="window.close();">        
     </form>
+    <script src="js/add-employee.js"></script>
 </body>
 </html>
